@@ -1,0 +1,121 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a, button, input, label, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background: #ff5722;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background-color: #ff5722; /* Make the nav background consistent with the header */
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content styling */
+main.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 2em;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    border-radius: 8px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    margin: 1em 0;
+}
+
+h1 {
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    color: #ffffff;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: #ff5722;
+    text-align: center;
+}
+
+p, ul {
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding-left: 1em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ff5722;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    main.container {
+        padding: 1em 0;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 0.5em 1em;
+    }
+}

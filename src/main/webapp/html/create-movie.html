@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style3.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <h1>Movie Database</h1>
+        <p>Discover the latest movies !</p>
+    </div>
+</header>
+<nav>
+    <button class="nav-toggle" aria-label="toggle navigation">&#9776;</button>
+    <ul class="nav-list">
+        <li><a href="/movie-webapp-1.00/main-menu">Movies</a></li>
+        <li><a href="/movie-webapp-1.00/admin-page">Admin Page</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <h1>Create movie</h1>
+    <div class="form">
+
+
+        <div class="tab-content">
+            <div id="login">
+
+                <form action="/movie-webapp-1.00/create-movie" method="post">
+
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label for="title">
+                                Title<span class="req">*</span>
+                            </label>
+                            <input type="text" name="title" required autocomplete="off" />
+                        </div>
+
+                        <div class="field-wrap">
+                            <label>
+                                Director<span class="req">*</span>
+                            </label>
+                            <input type="text" name="director" required autocomplete="off"/>
+                        </div>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Genre<span class="req">*</span>
+                        </label>
+                        <input type="text" name="genre" required autocomplete="off"/>
+                    </div>
+                    
+                    <div class="field-wrap">
+                        <label>
+                            Release date<span class="req">*</span>
+                        </label>
+                        <input type="text" name="releasedate" placeholder="1900-01-01" required autocomplete="off"/>
+                    </div>
+                    
+                    <div class="field-wrap">
+                        <label>
+                            Trailer URL<span class="req">*</span>
+                        </label>
+                        <input type="text" name="trailerurl" required autocomplete="off"/>
+                    </div>
+                    
+
+                    <button type="submit" id="sign-up" class="button button-block"/>Submit</button>
+
+                </form>
+
+            </div>
+
+
+        </div><!-- tab-content -->
+
+    </div> <!-- /form -->
+</main>
+</body>
+<footer>
+    <p>&copy; 2024 Movie Database. All rights reserved.</p>
+</footer>
+<script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-list').classList.toggle('expanded');
+    });
+</script>
+</body>
+</html>
