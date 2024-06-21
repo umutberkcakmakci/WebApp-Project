@@ -1,0 +1,49 @@
+\subsection{REST API Details}
+
+%List here a few resources retrievable via REST API
+
+\subsubsection*{A resource}
+
+% the description of the resource
+
+This API is used for inserting new Person to the database.
+
+
+\begin{itemize}
+    \item URL: \texttt{/rest/person}
+    \item Method: \texttt{POST}
+    \item URL Parameters: None
+    \item Data Parameters: 
+    \{"person":
+    \{"name":"Name", 
+    "surname":"Surname", 
+    "shortBio":"Creator of Movie", 
+    "birthplace":"New York", 
+    "birthdate":"1900-11-11", 
+    "photolink":"https://rb.gy/1gr6bf", 
+    "role":"Role"\}\}
+
+    \item Success Response:
+        \begin{itemize}
+        \item Code: 200 OK
+        \end{itemize}
+        
+    \item Error Response:
+        \begin{itemize}
+        \item Code: 400 BAD REQUEST
+        \item Code: 500 INTERNAL SERVER ERROR
+        \item Code: 404 NOT FOUND
+        \item Code: 405 METHOD NOT ALLOWED
+        \end{itemize}
+    
+\end{itemize}
+    \item Sample Call:
+        curl -v -X POST -H "Content-Type: application/json" -d \{"person":
+    \{"name":"Name", 
+    "surname":"Surname", 
+    "shortBio":"Creator of Movie", 
+    "birthplace":"New York", 
+    "birthdate":"1900-11-11", 
+    "photolink":"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460\_640.png", 
+    "role":"Role"\}\} http://localhost:8080/movie-webapp-1.00/rest/person
+
